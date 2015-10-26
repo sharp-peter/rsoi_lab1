@@ -59,7 +59,7 @@ def authorization():
 
 # Starting authentication
 def authenticate():
-	auth_query = 'client_id=' + CID + '&response_type=code&state' + str(uuid4())
+	auth_query = 'client_id=' + CID + '&response_type=code&state=' + str(uuid4())
 	os.system('start \"\" \"' + API_URI + 'oauth2/authorize?' + auth_query +'\"')
 	return authorization()
 
